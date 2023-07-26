@@ -41,18 +41,12 @@ class AlumnoServiceTest {
 
     @Test
     void testCrearAlumnos() {
-
-
         listaDeAlumnos.add(new Alumno("Andres",listaDeCalificaciones));
         assertEquals(1,listaDeAlumnos.size());
     }
 
     @Test
     void testBuscarAlumno() {
-        listaDeCalificaciones.add(9);
-        listaDeCalificaciones.add(10);
-        listaDeCalificaciones.add(8);
-
         listaDeAlumnos.add(new Alumno("Andres",listaDeCalificaciones));
         boolean isAlumno = false;
         for (Alumno alumno:listaDeAlumnos) {
@@ -67,7 +61,9 @@ class AlumnoServiceTest {
 
     @Test
     void testNotaFinal() {
-
+        listaDeAlumnos.add(new Alumno("Andres",listaDeCalificaciones));
+        int promedio = (listaDeCalificaciones.get(0) + listaDeCalificaciones.get(1) + listaDeCalificaciones.get(2))/3;
+        assertEquals(9,promedio);
     }
 
 }

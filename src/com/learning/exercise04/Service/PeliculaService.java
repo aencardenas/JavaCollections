@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class PeliculaService {
 
-    public ArrayList<Pelicula> listaDePeliculas = new ArrayList<Pelicula>();
+    public ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
 
     public void crearPelicula() {
         Scanner sc = new Scanner(System.in);
